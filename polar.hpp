@@ -131,13 +131,3 @@ template <typename T>
   ", " << p.m_theta << ")";
   return out;
 }
-
-
-template <typename T>   
-void Polar<T>::print() const
-{
-  cout << " the R is: " << m_r << 
-  " and the Theta is: " << m_theta << endl;
-  return;
-
-}

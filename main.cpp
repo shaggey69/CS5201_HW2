@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	vector<Polar<double> > polarVect;
 
 	in.open(argv[1]);
-	argc = -1;
+	argc = 0;
 	in >> num_of_paris;
 
 	for (int i = 0; i < num_of_paris ; i++)
