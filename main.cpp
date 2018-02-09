@@ -1,31 +1,36 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <iomanip> 
 #include "polar.h"
 #include "norm.cpp"
 
 using namespace std;
-int main()
+int main(int argc, char *argv[])
 {	
-	int numOfCases = 0;
-	float tempR = 0;
-	float tempTheta = 0;
+	ifstream in;
+	int num_of_paris = 0 ;
+	double tempP = 0 , tempT = 0;
+	vector<Polar<double> > polarVect;
 
-	ifstream theFile;
-	theFile.open("input_dataset2");
-	theFile >> numOfCases;
-	cout << numOfCases;
+	in.open(argv[1]);
+	argc = -1;
+	in >> num_of_paris;
 
-	vector<Polar<float> > polarVect;
-
-	for (int i = 0; i < numOfCases ; i++)
+	for (int i = 0; i < num_of_paris ; i++)
 	{
-		theFile >> tempR;
-		theFile >> tempTheta;
-		Polar<float> tempPolar(tempR,tempTheta);
-		polarVect.push_back(tempPolar);
-	}	
+		in >> tempP ;
+		in >> tempT ;
+		Polar<double> tempPolarPair (tempP,tempT);
+		polarVect.push_back(tempPolarPair);
 
-	cout << polarVect;
+	}
+	cout << setprecision(12);
+	cout << polarVect[0]/polarVect[1] << endl;
+	cout << polarVect[2]*polarVect[3] << endl;
+	cout << !polarVect[4] << endl;
+	Norm <double> my_norm;
+	cout << my_norm(polarVect) << endl;
+
 	return 0;
 }

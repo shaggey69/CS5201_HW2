@@ -45,90 +45,93 @@ Polar<T>& Polar<T>::operator= (const Polar<T>& rhs)
 
 
 template <typename T>   
-const T Polar<T>::operator[] (const int i)
+T Polar<T>::operator[] (const int i) const
 {
   if (i == 0)
     return m_r;
-  else
+  else 
     return m_theta;
 }
 
 
-
 template <typename T>  
-bool Polar<T>::operator<(const Polar<T>& rhs)
+bool Polar<T>::operator<(const Polar<T>& rhs) const
 {
   return (m_r < rhs.m_r);
 }
 
 template <typename T>   
-bool Polar<T>::operator>(const Polar<T>& rhs)
+bool Polar<T>::operator>(const Polar<T>& rhs) const
 {
   return (m_r > rhs.m_r);
 }
 
 template <typename T>   
-bool Polar<T>::operator==(const Polar<T>& rhs)
+bool Polar<T>::operator==(const Polar<T>& rhs) const
 { 
   return (m_r == rhs.m_r);
 }
 
 template <typename T>       
-bool Polar<T>::operator!=(const Polar<T>& rhs)
+bool Polar<T>::operator!=(const Polar<T>& rhs) const
 {
   return (m_r != rhs.m_r);
 }
 
 
 template <typename T>   
-Polar<T>& Polar<T>::operator-() 
+Polar<T> Polar<T>::operator-() const
 {
-  m_r = -m_r;
-  return (*this);
+  Polar<T> temp;
+  temp.m_r = -m_r;
+  temp.m_theta = m_theta;
+  return temp;
 }
 
 template <typename T>   
- Polar<T>& Polar<T>::operator*( const Polar<T>& rhs)
+ Polar<T> Polar<T>::operator*( const Polar<T>& rhs) const
 {
-  m_r = m_r*rhs.m_r;
-  m_theta = m_theta*rhs.m_theta;
-  return (*this);
+  Polar<T> temp;
+  temp.m_r = m_r*rhs.m_r;
+  temp.m_theta = m_theta+rhs.m_theta;
+  return temp;
 }
 
 
 template <typename T>   
- Polar<T>& Polar<T>::operator/( const Polar<T>& rhs)
+ Polar<T> Polar<T>::operator/( const Polar<T>& rhs) const
 {
-  m_r = m_r/rhs.m_r;
-  m_theta = m_theta-rhs.m_theta;
-  return (*this);
+  Polar<T> temp;
+  temp.m_r = m_r/rhs.m_r;
+  temp.m_theta = m_theta-rhs.m_theta;
+  return temp;
 }
 
 template <typename T>   
-Polar<T>& Polar<T>::operator~()
+T Polar<T>::operator~ () const
 {
-  m_r = abs(m_r);
-  return (*this);
-
+  return abs(m_r);
 }
 
 template <typename T>   
-Polar<T>& Polar<T>::operator!()
+Polar<T> Polar<T>::operator!() const
 {
-  m_theta = -m_theta;
-  return (*this);
+  Polar<T> temp;
+  temp.m_r = m_r;
+  temp.m_theta = -m_theta;
+  return temp;
 }
 
-/*
+
 template <typename T>   
-ostream& operator<< (ostream& out, const Polar<T> & p)
+ ostream& operator<< (ostream& out , const Polar<T> & p)
 {
 
-  out << " the R is: " << p.m_r << 
-  "and the Theta is: " << p.m_theta << endl;
+  out << "(" << p.m_r << 
+  ", " << p.m_theta << ")";
   return out;
 }
-*/
+
 
 template <typename T>   
 void Polar<T>::print() const

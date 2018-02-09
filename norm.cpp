@@ -1,17 +1,21 @@
 
 #include "polar.h"
-/*
+#include <vector>
+
 template <typename T>
 class Norm
 {
 	public:
-		T operator()(Polar<T> p);
-
+		T operator()(const vector<Polar<T> > & vecP);
 };
+
 template <typename T>
-T operator()(Polar<T> p)
+T Norm<T>::operator()(const vector<Polar<T> > & vecP)
 {
-	T retValue = ~p;
-	return retValue;
+	T sum = 0;
+	for ( auto &i : vecP )
+	{
+		sum += ~i;
+	}
+	return sum;
 }
-*/
