@@ -9,6 +9,7 @@ Date: 2.12.18
 #include <cmath>
 using namespace std;
 
+//Defult Constructer
 template <typename T>   
 Polar<T>::Polar()
 {
@@ -16,6 +17,7 @@ Polar<T>::Polar()
   m_theta = 0;
 }
 
+//initialize Constructer
 template <typename T>   
 Polar<T>::Polar(const T r, const T theta)
 {
@@ -23,6 +25,7 @@ Polar<T>::Polar(const T r, const T theta)
   m_theta = theta;
 }
 
+//copy Constructer
 template <typename T>   
 Polar<T>::Polar(const Polar<T>& source)
 {
@@ -30,11 +33,12 @@ Polar<T>::Polar(const Polar<T>& source)
   m_theta = source.m_theta;
 }
 
+//Destructor
 template <typename T>   
 Polar<T>::~Polar()
 {}
 
-
+//= assignment 
 template <typename T>   
 Polar<T>& Polar<T>::operator= (const Polar<T>& rhs)
 {
@@ -43,7 +47,7 @@ Polar<T>& Polar<T>::operator= (const Polar<T>& rhs)
   return (*this);
 }
 
-
+//object getter []
 template <typename T>   
 T Polar<T>::operator[] (const int i) const
 {
@@ -53,32 +57,35 @@ T Polar<T>::operator[] (const int i) const
     return m_theta;
 }
 
-
+//Less then checkr 
 template <typename T>  
 bool Polar<T>::operator<(const Polar<T>& rhs) const
 {
   return (m_r < rhs.m_r);
 }
 
+//More then checkr 
 template <typename T>   
 bool Polar<T>::operator>(const Polar<T>& rhs) const
 {
   return (m_r > rhs.m_r);
 }
 
+//Is equel checkr 
 template <typename T>   
 bool Polar<T>::operator==(const Polar<T>& rhs) const
 { 
   return (m_r == rhs.m_r);
 }
 
+//Is Not equel checkr
 template <typename T>       
 bool Polar<T>::operator!=(const Polar<T>& rhs) const
 {
   return (m_r != rhs.m_r);
 }
 
-
+//'-' Operator
 template <typename T>   
 Polar<T> Polar<T>::operator-() const
 {
@@ -88,6 +95,7 @@ Polar<T> Polar<T>::operator-() const
   return temp;
 }
 
+//'*' Operator
 template <typename T>   
  Polar<T> Polar<T>::operator*( const Polar<T>& rhs) const
 {
@@ -97,7 +105,7 @@ template <typename T>
   return temp;
 }
 
-
+//'/' Operator
 template <typename T>   
  Polar<T> Polar<T>::operator/( const Polar<T>& rhs) const
 {
@@ -107,12 +115,14 @@ template <typename T>
   return temp;
 }
 
+//'~' Operator
 template <typename T>   
 T Polar<T>::operator~ () const
 {
   return abs(m_r);
 }
 
+//'!' Operator
 template <typename T>   
 Polar<T> Polar<T>::operator!() const
 {
@@ -122,7 +132,7 @@ Polar<T> Polar<T>::operator!() const
   return temp;
 }
 
-
+//Stream insertion
 template <typename T>   
  ostream& operator<< (ostream& out , const Polar<T> & p)
 {
