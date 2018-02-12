@@ -1,0 +1,397 @@
+\hypertarget{classPolar}{}\section{Polar$<$ T $>$ Class Template Reference}
+\label{classPolar}\index{Polar$<$ T $>$@{Polar$<$ T $>$}}
+
+
+{\ttfamily \#include $<$polar.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPolar_ac33c960b4ee3c406cc68f12998993764}{Polar} ()
+\item 
+\hyperlink{classPolar_a095329664869903d091679bbebb9c7ca}{Polar} (const T r, const T theta)
+\item 
+\hyperlink{classPolar_ad6f9e2e01b5fa1c06de64fafbc2129dc}{Polar} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&source)
+\item 
+\hyperlink{classPolar_a5d8bdb7a0722f6e4e93189a395a2f117}{$\sim$\+Polar} ()\hypertarget{classPolar_a5d8bdb7a0722f6e4e93189a395a2f117}{}\label{classPolar_a5d8bdb7a0722f6e4e93189a395a2f117}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classPolar}{Polar}$<$ T $>$ \& \hyperlink{classPolar_a653bb22a1d1fdf39464e7952c86ff970}{operator=} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&rhs)
+\item 
+T \hyperlink{classPolar_ab9a8189431f2416796c5cda9096dbdf2}{operator\mbox{[}$\,$\mbox{]}} (const int i) const 
+\item 
+bool \hyperlink{classPolar_a1d838d9fcc6bd22cc8f7853696b27a8b}{operator$<$} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{classPolar_aa55128f4975463c8ec87d92e8cb89ae1}{operator$>$} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{classPolar_a40155f3c10ba1e3356bd1e9dba6f4bf8}{operator==} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{classPolar_a48957dec4f0f6f60d8a69b56584bd037}{operator!=} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{classPolar}{Polar}$<$ T $>$ \hyperlink{classPolar_a8d02234b8eb93985d1830c7d3d034107}{operator-\/} () const 
+\item 
+\hyperlink{classPolar}{Polar}$<$ T $>$ \hyperlink{classPolar_a990348f7091d4fac3dcc63fa551106bc}{operator$\ast$} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{classPolar}{Polar}$<$ T $>$ \hyperlink{classPolar_a239a696ee88a60119fb5a13a265df5a2}{operator/} (const \hyperlink{classPolar}{Polar}$<$ T $>$ \&rhs) const 
+\item 
+T \hyperlink{classPolar_a417fa96a610c1cc28132fc06eb346b2a}{operator$\sim$} () const 
+\item 
+\hyperlink{classPolar}{Polar}$<$ T $>$ \hyperlink{classPolar_a6e4ec0c146720b4bd9b2e1da2198b074}{operator!} () const 
+\item 
+T \hyperlink{classPolar_a08e46e2c552b04f1b2e19dc7978b245a}{getR} () const 
+\item 
+T \hyperlink{classPolar_ac1aea2b975ccfbfdfbfedf5fb1cc80ae}{get\+Theta} () const 
+\item 
+void \hyperlink{classPolar_a7a19e9c5820d3ade6938ab8854318094}{setR} (const T r)
+\item 
+void \hyperlink{classPolar_adcd89628e8d1c0dca46f63e60532dc8d}{set\+Theta} (const T theta)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classPolar_a718faf9e0c205f923cdf919ce05d02e2}{operator} (ostream \&out, const \hyperlink{classPolar}{Polar}$<$ T $>$ \&p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Polar$<$ T $>$}
+
+A \hyperlink{classPolar}{Polar}.
+
+It\textquotesingle{}s a \hyperlink{classPolar}{Polar} set. m\+\_\+r reprents R (distance from (0,0)) m\+\_\+theata reprents the angel from (0,0) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Polar@{Polar}!Polar@{Polar}}
+\index{Polar@{Polar}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{Polar()}{Polar()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$\+::{\bf Polar} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPolar_ac33c960b4ee3c406cc68f12998993764}{}\label{classPolar_ac33c960b4ee3c406cc68f12998993764}
+Defult Constructer
+
+\begin{DoxyPostcond}{Postcondition}
+A new \hyperlink{classPolar}{Polar} is created with length and angle equel zero 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!Polar@{Polar}}
+\index{Polar@{Polar}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{Polar(const T r, const T theta)}{Polar(const T r, const T theta)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$\+::{\bf Polar} (
+\begin{DoxyParamCaption}
+\item[{const T}]{r, }
+\item[{const T}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{classPolar_a095329664869903d091679bbebb9c7ca}{}\label{classPolar_a095329664869903d091679bbebb9c7ca}
+Initialize Constructer
+
+\begin{DoxyPostcond}{Postcondition}
+A new \hyperlink{classPolar}{Polar} is created with length and angle equel to given r and theta 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!Polar@{Polar}}
+\index{Polar@{Polar}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{Polar(const Polar$<$ T $>$ \&source)}{Polar(const Polar< T > &source)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$\+::{\bf Polar} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{source}
+\end{DoxyParamCaption}
+)}\hypertarget{classPolar_ad6f9e2e01b5fa1c06de64fafbc2129dc}{}\label{classPolar_ad6f9e2e01b5fa1c06de64fafbc2129dc}
+Copy Constructer
+
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A new \hyperlink{classPolar}{Polar} is created with length and angle equel to the Source \hyperlink{classPolar}{Polar} 
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\index{Polar@{Polar}!getR@{getR}}
+\index{getR@{getR}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{get\+R() const }{getR() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Polar}$<$ T $>$\+::getR (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPolar_a08e46e2c552b04f1b2e19dc7978b245a}{}\label{classPolar_a08e46e2c552b04f1b2e19dc7978b245a}
+Get r
+
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the r of the \hyperlink{classPolar}{Polar} 
+\end{DoxyReturn}
+\index{Polar@{Polar}!get\+Theta@{get\+Theta}}
+\index{get\+Theta@{get\+Theta}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{get\+Theta() const }{getTheta() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Polar}$<$ T $>$\+::get\+Theta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPolar_ac1aea2b975ccfbfdfbfedf5fb1cc80ae}{}\label{classPolar_ac1aea2b975ccfbfdfbfedf5fb1cc80ae}
+Get theta
+
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the theta of the \hyperlink{classPolar}{Polar} 
+\end{DoxyReturn}
+\index{Polar@{Polar}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator"!() const }{operator!() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$ {\bf Polar}$<$ T $>$\+::operator! (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a6e4ec0c146720b4bd9b2e1da2198b074}{}\label{classPolar_a6e4ec0c146720b4bd9b2e1da2198b074}
+! Operator
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}-\/\textquotesingle{} defiend for it! 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{classPolar}{Polar} is created with same R as C.\+O and with negated Theata as C.\+O 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+a new \hyperlink{classPolar}{Polar} is born! 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator"!=(const Polar$<$ T $>$ \&rhs) const }{operator!=(const Polar< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Polar}$<$ T $>$\+::{\bf operator!}= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a48957dec4f0f6f60d8a69b56584bd037}{}\label{classPolar_a48957dec4f0f6f60d8a69b56584bd037}
+Is Not equel checkr
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}!=\textquotesingle{} defiend for it! 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Will return true if R of calling object is not equel to R of R\+HS. False otherwise. 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Polar$<$ T $>$ \&rhs) const }{operator*(const Polar< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$ {\bf Polar}$<$ T $>$\+::{\bf operator}$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a990348f7091d4fac3dcc63fa551106bc}{}\label{classPolar_a990348f7091d4fac3dcc63fa551106bc}
+
+\begin{DoxyItemize}
+\item Operator
+\end{DoxyItemize}
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}$\ast$\textquotesingle{} and \textquotesingle{}+\textquotesingle{} defiend for it! 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{classPolar}{Polar} is created with the following\+:
+\end{DoxyReturn}
+r = r of CO $\ast$ r of R\+HS
+
+theta = theat of C.\+O + theta of R\+HS
+
+\begin{DoxyPostcond}{Postcondition}
+a new \hyperlink{classPolar}{Polar} is born! 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator-\/() const }{operator-() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$ {\bf Polar}$<$ T $>$\+::{\bf operator}-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a8d02234b8eb93985d1830c7d3d034107}{}\label{classPolar_a8d02234b8eb93985d1830c7d3d034107}
+\textquotesingle{}-\/\textquotesingle{} Operator
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}-\/\textquotesingle{} defiend for it! 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{classPolar}{Polar} is created with same Theata as C.\+O and with negated R as C.\+O 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+a new \hyperlink{classPolar}{Polar} is born! 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator/@{operator/}}
+\index{operator/@{operator/}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator/(const Polar$<$ T $>$ \&rhs) const }{operator/(const Polar< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$ {\bf Polar}$<$ T $>$\+::{\bf operator}/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a239a696ee88a60119fb5a13a265df5a2}{}\label{classPolar_a239a696ee88a60119fb5a13a265df5a2}
+/ Operator
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}/\textquotesingle{} and \textquotesingle{}-\/\textquotesingle{} defiend for it! r of R\+HS can not be equel to 0! 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{classPolar}{Polar} is created with the following\+: r,theta
+\end{DoxyReturn}
+r = r of CO / r of R\+HS
+
+theta = theat of C.\+O -\/ theta of R\+HS
+
+\begin{DoxyPostcond}{Postcondition}
+a new \hyperlink{classPolar}{Polar} is born! 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator$<$(const Polar$<$ T $>$ \&rhs) const }{operator<(const Polar< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Polar}$<$ T $>$\+::{\bf operator}$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a1d838d9fcc6bd22cc8f7853696b27a8b}{}\label{classPolar_a1d838d9fcc6bd22cc8f7853696b27a8b}
+Less then checkr
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}$<$\textquotesingle{} defiend for it! 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Will return true if R of calling object is less then R of R\+HS. False otherwise. 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator=@{operator=}}
+\index{operator=@{operator=}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator=(const Polar$<$ T $>$ \&rhs)}{operator=(const Polar< T > &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Polar}$<$ T $>$ \& {\bf Polar}$<$ T $>$\+::{\bf operator}= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classPolar_a653bb22a1d1fdf39464e7952c86ff970}{}\label{classPolar_a653bb22a1d1fdf39464e7952c86ff970}
+= assignment
+
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Calling object \hyperlink{classPolar}{Polar}\textquotesingle{}s length and angle are equel to the Source \hyperlink{classPolar}{Polar} 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator==@{operator==}}
+\index{operator==@{operator==}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator==(const Polar$<$ T $>$ \&rhs) const }{operator==(const Polar< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Polar}$<$ T $>$\+::{\bf operator}== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a40155f3c10ba1e3356bd1e9dba6f4bf8}{}\label{classPolar_a40155f3c10ba1e3356bd1e9dba6f4bf8}
+Is equel checkr
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}==\textquotesingle{} defiend for it! 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Will return true if R of calling object is equel to R of R\+HS. False otherwise. 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator$>$(const Polar$<$ T $>$ \&rhs) const }{operator>(const Polar< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Polar}$<$ T $>$\+::{\bf operator}$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polar}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_aa55128f4975463c8ec87d92e8cb89ae1}{}\label{classPolar_aa55128f4975463c8ec87d92e8cb89ae1}
+More then checkr
+
+\begin{DoxyPrecond}{Precondition}
+T must have \textquotesingle{}$>$\textquotesingle{} defiend for it! 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Will return true if R of calling object is more then R of R\+HS. False otherwise. 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator[](const int i) const }{operator[](const int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Polar}$<$ T $>$\+::{\bf operator}\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const int}]{i}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_ab9a8189431f2416796c5cda9096dbdf2}{}\label{classPolar_ab9a8189431f2416796c5cda9096dbdf2}
+object getter \mbox{[}\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & M\+U\+ST be 0 or 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Will return value of R for 0 and Theta for 1. For non 0 or 1 function will defult return Theta. 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator$\sim$() const }{operator~() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Polar}$<$ T $>$\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPolar_a417fa96a610c1cc28132fc06eb346b2a}{}\label{classPolar_a417fa96a610c1cc28132fc06eb346b2a}
+$\sim$ Operator
+
+\begin{DoxyPrecond}{Precondition}
+T must have abs function defined for it! 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+the magnitude of the \hyperlink{classPolar}{Polar} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!setR@{setR}}
+\index{setR@{setR}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{set\+R(const T r)}{setR(const T r)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Polar}$<$ T $>$\+::setR (
+\begin{DoxyParamCaption}
+\item[{const T}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPolar_a7a19e9c5820d3ade6938ab8854318094}{}\label{classPolar_a7a19e9c5820d3ade6938ab8854318094}
+Set r
+
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+r is modfied to r 
+\end{DoxyPostcond}
+\index{Polar@{Polar}!set\+Theta@{set\+Theta}}
+\index{set\+Theta@{set\+Theta}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{set\+Theta(const T theta)}{setTheta(const T theta)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Polar}$<$ T $>$\+::set\+Theta (
+\begin{DoxyParamCaption}
+\item[{const T}]{theta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPolar_adcd89628e8d1c0dca46f63e60532dc8d}{}\label{classPolar_adcd89628e8d1c0dca46f63e60532dc8d}
+Set theta
+
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+theta is modfied to theta 
+\end{DoxyPostcond}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Polar@{Polar}!operator@{operator}}
+\index{operator@{operator}!Polar@{Polar}}
+\subsubsection[{\texorpdfstring{operator}{operator}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ ostream\& operator (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf Polar}$<$ T $>$ \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classPolar_a718faf9e0c205f923cdf919ce05d02e2}{}\label{classPolar_a718faf9e0c205f923cdf919ce05d02e2}
+Stream insertion operator for {\ttfamily \hyperlink{classPolar}{Polar}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The contents of the \hyperlink{classPolar}{Polar} are printed to the ouptut stream in format ({\itshape \hyperlink{classPolar}{Polar} length}, {\itshape Angle}) 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{polar_8h}{polar.\+h}\item 
+polar.\+hpp\end{DoxyCompactItemize}

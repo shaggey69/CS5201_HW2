@@ -38,7 +38,7 @@ ostream& operator<< (ostream& out , const Polar<T> & p);
 /*! A Polar.
  *
  * It's a Polar set.
- * m_r reprents the Pole (distance from (0,0))
+ * m_r reprents R (distance from (0,0))
  * m_theata reprents the angel from (0,0)
  *
  */
@@ -59,16 +59,16 @@ class Polar
 
 		Polar();
 
-		/*! initialize Constructer
+		/*! Initialize Constructer
 		*
 		* \post A new Polar is created with length and angle equel 
-		* to given r and theat 
+		* to given r and theta 
 		*
 		*/
 
 		Polar(const T r, const T theta);
 
-		/*! copy Constructer
+		/*! Copy Constructer
 		*
 		* \pre none
 		* \post A new Polar is created with length and angle equel 
@@ -85,7 +85,7 @@ class Polar
 		*
 		* \pre none
 		* \post Calling object Polar's length and angle are equel 
-		* \to the Source Polar 
+		* to the Source Polar 
 		*
 		*/
 		Polar<T>& operator= (const Polar<T>& rhs);
@@ -95,7 +95,7 @@ class Polar
 		* \param i MUST be 0 or 1
 		* \pre none
 		* \post Will return value of R for 0 and Theta for 1.
-		* for non 0 or 1 function will defurl return Theta.
+		* For non 0 or 1 function will defult return Theta.
 		*
 		*/
 
@@ -103,10 +103,10 @@ class Polar
 
 		/*! Less then checkr 
 		*
-		* \
+		* 
 		* \pre T must have '<' defiend for it!
-		* \post Will return true if T of calling object is
-		* \less then T of RHS. False otherwise.
+		* \post Will return true if R of calling object is
+		* less then R of RHS. False otherwise.
 		*
 		*/
 		bool operator<(const Polar<T>& rhs) const;
@@ -114,20 +114,19 @@ class Polar
 
 		/*! More then checkr 
 		*
-		* \
+		* 
 		* \pre T must have '>' defiend for it!
-		* \post Will return true if T of calling object is
-		* \more then T of RHS. False otherwise.
+		* \post Will return true if R of calling object is
+		* more then R of RHS. False otherwise.
 		*
 		*/
 		bool operator>(const Polar<T>& rhs) const;
 
 		/*! Is equel checkr 
 		*
-		* \
 		* \pre T must have '==' defiend for it!
-		* \post Will return true if T of calling object is
-		* \equel to T of RHS. False otherwise.
+		* \post Will return true if R of calling object is
+		* equel to R of RHS. False otherwise.
 		*
 		*/
 
@@ -135,10 +134,9 @@ class Polar
 
 		/*! Is Not equel checkr 
 		*
-		* \
 		* \pre T must have '!=' defiend for it!
-		* \post Will return true if T of calling object is
-		* \ not equel to T of RHS. False otherwise.
+		* \post Will return true if R of calling object is
+		* not equel to R of RHS. False otherwise.
 		*
 		*/
 
@@ -146,7 +144,7 @@ class Polar
 
 		/*! '-' Operator
 		*
-		* \
+		* 
 		* \pre T must have '-' defiend for it!
 		* \return A new Polar is created with same Theata as C.O
 		* and with negated R as C.O
@@ -155,34 +153,39 @@ class Polar
 
 		Polar<T> operator-() const;
 
-		/* '*' Operator
+		/*! * Operator
 		*
-		* \
+		* 
 		* \pre T must have '*' and '+' defiend for it!
-		* \return  A new Polar is created with the following: r,theta
+		* \return  A new Polar is created with the following:
+		*
 		* r = r of CO * r of RHS
+		*
 		* theta = theat of C.O + theta of RHS
+		*
 		* \post a new Polar is born!
 		*/
 
-		Polar<T> operator* ( const Polar<T>& rhs) const;
+		Polar<T> operator* (const Polar<T>& rhs) const;
 
-		/* '/' Operator
+		/*! / Operator
 		*
-		* \
+		* 
 		* \pre T must have '/' and '-' defiend for it! r of RHS can not
 		* be equel to 0!
 		* \return A new Polar is created with the following: r,theta
+		*
 		* r = r of CO / r of RHS
+		*
 		* theta = theat of C.O - theta of RHS
+		*
 		* \post a new Polar is born!
 		*/
 
-		Polar<T> operator/ ( const Polar<T>& rhs) const;
+		Polar<T> operator/ (const Polar<T>& rhs) const;
 
-		/* '~' Operator
+		/*! ~ Operator
 		*
-		* \
 		* \pre T must have abs function defined for it!
 		*	\return the magnitude of the Polar
 		* \post none
@@ -190,9 +193,8 @@ class Polar
 
 		T operator~ () const;
 
-		/*! '!' Operator
+		/*! ! Operator
 		*
-		* \
 		* \pre T must have '-' defiend for it!
 		* \return A new Polar is created with same R as C.O
 		* and with negated Theata as C.O
@@ -226,7 +228,7 @@ class Polar
 		* \pre none
 		* \post none
 		* \return the theta of the Polar
-		*
+		
 		*/
 		T getTheta() const {return m_theta;}
 

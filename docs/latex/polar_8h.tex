@@ -1,0 +1,42 @@
+\hypertarget{polar_8h}{}\section{polar.\+h File Reference}
+\label{polar_8h}\index{polar.\+h@{polar.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include \char`\"{}polar.\+hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPolar}{Polar$<$ T $>$}
+\item 
+class \hyperlink{classPolar}{Polar$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\ostream \& \hyperlink{polar_8h_a116aaaadfed701dca32ed97e76bded0f}{operator$<$$<$} (ostream \&out, const \hyperlink{classPolar}{Polar}$<$ T $>$ \&p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classPolar}{Polar} library. 
+
+\subsection{Function Documentation}
+\index{polar.\+h@{polar.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!polar.\+h@{polar.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&out, const Polar$<$ T $>$ \&p)}{operator<<(ostream &out, const Polar< T > &p)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf Polar}$<$ T $>$ \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{polar_8h_a116aaaadfed701dca32ed97e76bded0f}{}\label{polar_8h_a116aaaadfed701dca32ed97e76bded0f}
+Stream insertion operator for {\ttfamily \hyperlink{classPolar}{Polar}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The contents of the \hyperlink{classPolar}{Polar} are printed to the ouptut stream in format ({\itshape \hyperlink{classPolar}{Polar} length}, {\itshape Angle}) 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified output stream. 
+\end{DoxyReturn}

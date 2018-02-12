@@ -14,6 +14,9 @@ Date: 2.12.18
 
 /*!
  * the Norm class
+ *
+ * A Pass-by function that calculates
+ * magnitude on sets
 */
 
 template <typename T>
@@ -21,7 +24,6 @@ class Norm
 {
 	/*! '()' Operator
 	*
-	* \
 	* \pre T must have '+=' defiend for it!
 	* \return the magnutute summation of all Polars in vecP
 	* \post none
